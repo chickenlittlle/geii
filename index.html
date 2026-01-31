@@ -1,1 +1,85 @@
-/Users/ailynmc/Downloads/programas_cpp/sanvalentin/index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>San Valentín </title>
+
+  <style>
+    body {
+      background-color: #e3e8c0;
+      text-align: center;
+      font-family: Helvetica, sans-serif;
+      padding-top: 40px;
+    }
+
+    h1 {
+      color: #ea9bdd;
+    }
+
+    img {
+      width: 200px;
+      transition: all 0.3s ease;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 15px;
+    }
+
+    #si {
+      background-color: #6ba1ff;
+      color: white;
+    }
+
+    #no {
+      background-color: #03315e;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>¿Quieres ser mi papoi? 🦐</h1>
+
+<img id="minion" src="minion.gif">
+
+
+  <div>
+    <button id="si">obvionegra</button>
+    <button id="no">naka</button>
+  </div>
+
+  <script>
+    let imagen = document.getElementById("minion");
+    let botonSi = document.getElementById("si");
+    let botonNo = document.getElementById("no");
+
+    let tamañoImagen = 200;
+    let tamañoSi = 18;
+
+    botonNo.onclick = function () {
+      tamañoImagen += 30;
+      tamañoSi += 5;
+
+      imagen.style.width = tamañoImagen + "px";
+      botonSi.style.fontSize = tamañoSi + "px";
+      botonNo.style.fontSize = "12px";
+    };
+
+    botonSi.onclick = function () {
+      document.body.innerHTML = `
+        <h1>cacapedopis</h1>
+        <h2>Te amo popo</h2>
+      `;
+    };
+  </script>
+
+</body>
+</html>
+
+
